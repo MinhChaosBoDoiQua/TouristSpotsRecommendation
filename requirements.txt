@@ -1,5 +1,5 @@
 Flask
 flask_bootstrap==3.3.7.1
 folium==0.14.0
-numpy==1.25.0
+numpy
 psycopg2==2.9.6
