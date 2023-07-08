@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ai-tech</title>
+    <link href="/static/hello.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>search</h1>
+
+    <form action="/shortestpath" method="POST">
+      <input type="text" name="spot_area" placeholder="Spot Area">
+      <input type="submit" name="s" value="Search">
+    </form>
+
+    {% if area %}
+    <h3>これは最も距離が短いコースです。巡回セールスマン問題の解法</h3>
+   
+    <p>
+      {% for i in out %}
+        {{ area[i][0] }} {{ area[i][1] }} {{ area[i][2] }} <br>
+      {% endfor %}
+    </p>
+    {% endif %}
+
+  </body>
+</html>

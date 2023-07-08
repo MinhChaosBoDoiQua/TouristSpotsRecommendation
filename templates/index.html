@@ -1,0 +1,62 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}ai-tech{% endblock %}
+{% block navbar %}
+<style>
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand {
+  padding-left: 40px;
+}
+
+iframe {
+    position: absolute;
+    border: 0;
+    width: 100%;
+    height: calc(100% - 52px);
+}
+</style>
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">ai-tech</a>
+    </div>
+    <div class="navbar-collapse collapse"> 
+      <ul class="nav navbar-nav">
+        <li><a href="/dataset" target="maps">Data Set</a></li>
+        <li><a href="/uploads" target="maps">Uploads</a></li>
+        <li><a href="/maps/osaka" target="maps">Osaka</a></li>
+        <li><a href="/maps/sapporo" target="maps">Sapporo</a></li>
+        <li><a href="/maps/tokyo" target="maps">Tokyo</a></li>
+        <li><a href="/search" target="maps">Search</a></li>
+        <li><a href="/shortestpath" target="maps">Shortest Path</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="page-header">
+    <iframe src="http://127.0.0.1:5000/maps/all" name="maps"></iframe>
+  </div>
+</div>
+{% endblock %}

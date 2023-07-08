@@ -1,0 +1,66 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<style>
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.container-main {
+  padding: 10px;
+  margin: 10px;
+}
+</style>
+<div class="container">
+  <div class="container-main">
+    <h1>Uploads</h1>
+    <form action="/uploads" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">City Name</label>
+        <input type="input" name="cityname" class="form-control" id="uploadInput1" placeholder="e.g. 東京">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Name</label>
+        <input type="input" name="spotname" class="form-control" id="uploadInput1" placeholder="e.g. 武蔵野大学">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Latitude</label>
+        <input type="input" name="spotlat" class="form-control" id="uploadInput1" placeholder="e.g. 34.0">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Longitude</label>
+        <input type="input" name="spotlong" class="form-control" id="uploadInput1" placeholder="e.g. 140.0">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot History and Culture</label>
+        <input type="input" name="spothiscul" class="form-control" id="uploadInput1" placeholder="0 - No or 1 - Yes">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Food and Product</label>
+        <input type="input" name="spotfood" class="form-control" id="uploadInput1" placeholder="0 - No or 1 - Yes">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Nature</label>
+        <input type="input" name="spotnature" class="form-control" id="uploadInput1" placeholder="0 - No or 1 - Yes">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot View</label>
+        <input type="input" name="spotview" class="form-control" id="uploadInput1" placeholder="0 - No or 1 - Yes">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Experience</label>
+        <input type="input" name="spotexperience" class="form-control" id="uploadInput1" placeholder="0 - No or 1 - Yes">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Opentime</label>
+        <input type="input" name="spotopen" class="form-control" id="uploadInput1" placeholder="e.g. 9:00">
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Spot Closetime</label>
+        <input type="input" name="spotclose" class="form-control" id="uploadInput1" placeholder="e.g. 22:00">
+      </div>
+      <input value="Submit" type="submit" />
+    </form>
+  </div>
+</div>
+{% endblock %}

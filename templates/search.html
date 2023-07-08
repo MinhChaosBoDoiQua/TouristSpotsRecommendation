@@ -1,0 +1,47 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<style>
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.container-main {
+  padding: 10px;
+  margin: 10px;
+}
+</style>
+<div class="container">
+  <div class="container-main">
+    <h1>Search</h1>
+    <form action="/search" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">History and Culture</label><br>
+        <label><input type="radio" name="history_culture" value="1" >Yes</input></label><br>
+        <label><input type="radio" name="history_culture" value="0" >No</input></label>
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Food Product</label><br>
+        <label><input type="radio" name="food_product" value="1" >Yes</input></label><br>
+        <label><input type="radio" name="food_product" value="0" >No</input></label>
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Nature</label><br>
+        <label><input type="radio" name="nature" value="1" >Yes</input></label><br>
+        <label><input type="radio" name="nature" value="0" >No</input></label>
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">View</label><br>
+        <label><input type="radio" name="view" value="1" >Yes</input></label><br>
+        <label><input type="radio" name="view" value="0" >No</input></label>
+      </div>
+      <div class="mb-3">
+        <label for="uploadInput1" class="form-label">Experience</label><br>
+        <label><input type="radio" name="experience" value="1" >Yes</input></label><br>
+        <label><input type="radio" name="experience" value="0" >No</input></label>
+      </div>
+      <input value="Submit" type="submit" />
+    </form>
+  </div>
+</div>
+{% endblock %}
